@@ -1,4 +1,4 @@
-# Fail Cases for Ghostwriter
+# Fail Cases for Ghostwriter  👻
 
 ```shell
 hypothesis write --idempotent ghosty.identity
