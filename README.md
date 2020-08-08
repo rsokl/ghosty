@@ -1,5 +1,7 @@
 # Fail Cases for Ghostwriter  👻
 
+Failure to import object used in `builds`
+
 ```shell
 hypothesis write --idempotent ghosty.identity
 ```
