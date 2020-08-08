@@ -1,5 +1,8 @@
 # Fail Cases for Ghostwriter  👻
 
+
+## Failure to import objects for builds
+
 Failure to import object used in `builds`
 
 ```shell
@@ -20,4 +23,15 @@ def test_idempotent_identity(x):
     repeat = ghosty.identity(x=result)
     assert result == repeat, (result, repeat)
 
+```
+
+
+## Failure to "find" module attributes
+
+```shell script
+hypothesis write --roundtrip ghosty.objects.as_int ghosty.objects.as_Person
+```
+
+```shell script
+Error: Found the 'ghosty.objects' module, but it doesn't have a 'as_int' attribute.
 ```
